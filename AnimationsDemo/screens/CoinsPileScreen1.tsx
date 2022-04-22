@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
+import { Button } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import { View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import { useEffect, useState } from 'react';
 
-import { CoinIcon } from '../components/coin/CoinIcon' 
+import { CoinPileAnim } from '../components/coin/CoinPileAnim';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
@@ -12,10 +13,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
       {/* <Text style={styles.title}>Tab One</Text> */}
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <EditScreenInfo path="/screens/TabOneScreen.tsx" /> */}
-      <Text style={styles.title}>1111</Text>
-      <CoinIcon />
-      <CoinIcon />
-      <Text style={styles.title}>222</Text>
+      <CoinPileAnim fromCoins={1} toCoins={20} timeMillis={1000} />
     </View>
   );
 }
@@ -24,15 +22,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+    justifyContent: 'flex-end',
+    paddingBottom: 50,
+    backgroundColor: 'white',
+  }
 });

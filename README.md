@@ -25,8 +25,7 @@ It should open your iOS simulator with the application running
 
 ## Adding SVG to React
 
-- Export React component from SVG file using https://svg2jsx.com/
-  - See other strategies at https://stackoverflow.com/questions/38830568/how-to-show-svg-file-on-react-native
-- Save the generated file to mySvgComponent.ts in your project
+- Export React component from SVG file using https://transform.tools/svg-to-react-native
+- Save the generated file to mySvgComponent.js in your project
 
 
